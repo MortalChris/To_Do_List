@@ -1,0 +1,11 @@
+Todo list needs
+	-Title
+	-Task/description
+	-Due date
+	-priority(something like a numbering system) with a checklist
+	
+Ui
+-view all projects
+-view all todos in each project (probably just the title and duedate… perhaps changing color for different priorities)
+-expand a single todo to see/edit its details
+-delete a todo
