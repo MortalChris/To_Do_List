@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    color: white;
     background-color: #506042
 }
 #content {
@@ -10,20 +11,32 @@
     "side main main"
     "side main main"
     ;
+    min-height: 63rem;
 }
 /* ======================================Side Bar Content=========================================== */
 #sidebar{
     grid-area: side;
-    border: .2rem solid blue;
+    border: .3rem solid blue;
 }
 header{
-
+    font-size: 2rem
+}
+#create-new-list-btn-ctn{
+    border: .3rem solid yellow;
 }
 #create-new-list-btn{
-    
+    border: none;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+#sidebar-list-projects-ctn{
+    border: .3rem solid purple;
+}
+#sidebar-note-ctn{
+    border: .3rem solid pink;
 }
 /* ======================================Main Content=============================================== */
 #main-content{
     grid-area: main;
-    border: .2rem solid red;
+    border: .3rem solid red;
 }
