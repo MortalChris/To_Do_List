@@ -3,3 +3,27 @@
     padding: 0;
     background-color: #506042
 }
+#content {
+    display: grid;
+    grid-template-columns: .2fr 1fr;
+    grid-template-areas: 
+    "side main main"
+    "side main main"
+    ;
+}
+/* ======================================Side Bar Content=========================================== */
+#sidebar{
+    grid-area: side;
+    border: .2rem solid blue;
+}
+header{
+
+}
+#create-new-list-btn{
+    
+}
+/* ======================================Main Content=============================================== */
+#main-content{
+    grid-area: main;
+    border: .2rem solid red;
+}

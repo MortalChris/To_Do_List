@@ -9,3 +9,11 @@ Ui
 -view all todos in each project (probably just the title and duedate… perhaps changing color for different priorities)
 -expand a single todo to see/edit its details
 -delete a todo
+
+Project
+-Sidebar that has listed todo projects
+-Button in the sidebar to start a new project
+	-when clicked allow to name project title(defualt value is todays date) and add list items
+		-option to delete/complete task with a strike out or delete them
+	-Have sidebar store projects and have option to delete them and possibly rename them
+
