@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     color: white;
-    background-color: #506042
+    background-color: #506042;
 }
 #content {
     display: grid;
@@ -21,16 +21,16 @@
 header{
     font-size: 2rem
 }
-#create-new-list-btn-ctn{
+/* #create-new-list-btn-ctn{
     border: .3rem solid yellow;
-}
-#create-new-list-btn{
-    border: none;
-    /* padding: 1rem; */
-    border-radius: 1rem;
-}
+} */
 #sidebar-list-projects-ctn{
     border: .3rem solid purple;
+}
+#create-new-list-btn{
+    /* border: none; */
+    /* padding: 1rem; */
+    /* border-radius: 1rem; */
 }
 #sidebar-note-ctn{
     border: .3rem solid pink;
