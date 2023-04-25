@@ -10,10 +10,32 @@ Ui
 -expand a single todo to see/edit its details
 -delete a todo
 
-Project
--Sidebar that has listed todo projects
--Button in the sidebar to start a new project
-	-when clicked allow to name project title(defualt value is todays date) and add list items
-		-option to delete/complete task with a strike out or delete them
-	-Have sidebar store projects and have option to delete them and possibly rename them
+Side bar
+	-Heading
+	-Add Projects/list
+		-Button brings up a form to submit title, priority, and displays in main content
+			-Form values get put into object
+		-Clicking on the project title in sidebar grabs the corresponding object and
+		displays it in main content
+	-Add Notes/list
+	Example:
+		Todo List
+		Notes
+		Project [create btn]
+		-Example list
+		-Example list
+		-Example list
+
+Main content
+-Any changes made updates the object it is in
+	-Displays To list project or notes when they are clicked on in side bar
+	-Displays Due date
+	-Has edit button for each list item and (strikethrough or checkbox)
+	-Delete button for each list item
+	Example:
+		Title of List
+		[ ] Example text..........1/12/2029 Dlte Edit
+		[X] Example text..........1/12/2029 Dlte Edit
+		[X] Example text..........1/12/2029 Dlte Edit
+
 
