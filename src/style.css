@@ -35,9 +35,53 @@ header{
 #sidebar-note-ctnr{
     border: .3rem solid pink;
 }
-#dialog-form-container{
-    margin: 20rem 0rem 0rem 50rem;
+
+/* ========================================Dialog Box=============================================== */
+#dialog-form{
+    margin: 15rem 0rem 0rem 50rem;
+    border: .5rem solid white;
+    border-radius: 2rem;
 }
+
+#project-title-form{
+    border-radius: 2rem;
+    padding: 3rem 0rem 0rem 0rem;
+    font-size: 1rem;
+}
+#project-title-form .form-group{
+    text-align: center;
+    font-size: 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 1rem;
+}
+#project-title-form .form-group .title-form-title-label{
+    font-size: 3rem;
+}
+#project-title-form .form-group input{
+    padding: .5rem 1rem .5rem 1rem;
+    border: .2rem solid white;
+    border-radius: .5rem;
+}
+
+/* Buttons and ctnrs */
+#project-title-form #form-btn-ctnr{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    padding: 0rem 1rem 1rem 1rem;
+    border-radius: 3rem;
+}
+#project-title-form #form-btn-ctnr button{
+    border: 1rem transparent;
+    font-size: 2rem;
+    transition-duration: 0.4s;
+}
+#project-title-form #form-btn-ctnr button:hover{
+    color: green;
+}
+
 /* ======================================Main Content=============================================== */
 #main-content{
     grid-area: main;

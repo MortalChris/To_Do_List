@@ -9,17 +9,18 @@
 </head>
 <body>
     <div id="content">
-        <dialog open class="modal" id="dialog-form-container">
-            <form>
+        <dialog open class="modal" id="dialog-form">
+            <form id="project-title-form">
                 <div class="form-group">
-                    <label class="col-md-4 control-label" for="Title">Title of Project</label>  
-                    <div class="col-md-4">
-                        <input id="Title" name="Title" type="text" placeholder="Ex. Shopping List, Work, etc." class="form-control input-md">
+                    <label class="title-form-title-label" for="Title">New Project</label>
+                    <label class="title-form-desc-label" for="Description">Enter a name for this project.</label>
+                    <div class="form-group-input-ctnr">
+                        <input id="Title" name="Title" type="text" placeholder="Input title" class="form-control input-md">
                     </div>
                 </div>
                 <div id="form-btn-ctnr">
-                    <button id="form-btn">Submit</button>
-                    <button id="form-btn">Close</button>
+                    <button id="form-btn-submit">Submit</button>
+                    <button id="form-btn-close">Close</button>
                 </div>
                 <!-- <div class="form-group">
                     <label class="col-md-4 control-label" for="selectPriority">Priority</label>
