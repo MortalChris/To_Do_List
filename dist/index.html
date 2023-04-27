@@ -9,17 +9,19 @@
 </head>
 <body>
     <div id="content">
-        <dialog class="modal" id="dialog-form-container">
+        <dialog open class="modal" id="dialog-form-container">
             <form>
-                <!-- Text input-->
                 <div class="form-group">
-                    <label class="col-md-4 control-label" for="Title">Title</label>  
+                    <label class="col-md-4 control-label" for="Title">Title of Project</label>  
                     <div class="col-md-4">
-                        <input id="Title" name="Title" type="text" placeholder="placeholder" class="form-control input-md">
+                        <input id="Title" name="Title" type="text" placeholder="Ex. Shopping List, Work, etc." class="form-control input-md">
                     </div>
                 </div>
-                <!-- Select Basic -->
-                <div class="form-group">
+                <div id="form-btn-ctnr">
+                    <button id="form-btn">Submit</button>
+                    <button id="form-btn">Close</button>
+                </div>
+                <!-- <div class="form-group">
                     <label class="col-md-4 control-label" for="selectPriority">Priority</label>
                     <div class="col-md-4">
                         <select id="selectPriority" name="selectPriority" class="form-control">
@@ -28,21 +30,21 @@
                             <option value="3">Med</option>
                             <option value="4">High</option>
                         </select>
-                    </div>
+                    </div> -->
             </form>
         </dialog>
         <div id="sidebar">
             <header>To Do List</header>
-            <!-- <div id="create-new-list-btn-ctn">
+            <!-- <div id="create-new-list-btn-ctnr">
                 <button id="create-new-list-btn">Create Todo</button>
             </div> -->
-            <div id="sidebar-note-ctn">
+            <div id="sidebar-note-ctnr">
                 <h2>Notes</h2>
                 <ul>
                     <li>This a note example</li>
                 </ul>
             </div>
-            <div id="sidebar-list-projects-ctn">
+            <div id="sidebar-list-projects-ctnr">
                 <h2>Projects <button id="create-new-list-btn">+</button></h2>
                 <ul>
                     <li>Pizza ingrediant list <button class="note-edit-btn">Edit</button><button class="note-delete-btn">Dlte</button></li>

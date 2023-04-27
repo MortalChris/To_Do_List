@@ -21,10 +21,10 @@
 header{
     font-size: 2rem
 }
-/* #create-new-list-btn-ctn{
+/* #create-new-list-btn-ctnr{
     border: .3rem solid yellow;
 } */
-#sidebar-list-projects-ctn{
+#sidebar-list-projects-ctnr{
     border: .3rem solid purple;
 }
 #create-new-list-btn{
@@ -32,8 +32,11 @@ header{
     /* padding: 1rem; */
     /* border-radius: 1rem; */
 }
-#sidebar-note-ctn{
+#sidebar-note-ctnr{
     border: .3rem solid pink;
+}
+#dialog-form-container{
+    margin: 20rem 0rem 0rem 50rem;
 }
 /* ======================================Main Content=============================================== */
 #main-content{
