@@ -9,18 +9,18 @@
 </head>
 <body>
     <div id="content">
-        <dialog open class="modal" id="dialog-form">
+        <dialog class="modal" id="dialog-form">
             <form id="project-title-form">
                 <div class="form-group">
                     <label class="title-form-title-label" for="Title">New Project</label>
                     <label class="title-form-desc-label" for="Description">Enter a name for this project.</label>
                     <div class="form-group-input-ctnr">
-                        <input id="Title" name="Title" type="text" placeholder="Input title" class="form-control input-md">
+                        <input id="project-title-input" name="Title" type="text" placeholder="Input title" class="form-control input-md">
                     </div>
                 </div>
                 <div id="form-btn-ctnr">
-                    <button id="form-btn-submit">Submit</button>
-                    <button id="form-btn-close">Close</button>
+                    <input type="submit" id="form-btn-submit">
+                    <input type="button" id="form-btn-close" value="Close">
                 </div>
                 <!-- <div class="form-group">
                     <label class="col-md-4 control-label" for="selectPriority">Priority</label>

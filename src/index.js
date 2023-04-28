@@ -1,5 +1,5 @@
 import './style.css';
-import {displayProjectMainContent} from './main-content';
+import {displayProjectMainContent} from './project-page';
 
 function start(){
     displayProjectMainContent();
