@@ -27,11 +27,11 @@ header{
 #sidebar-list-projects-ctnr{
     border: .3rem solid purple;
 }
-#create-new-list-btn{
-    /* border: none; */
-    /* padding: 1rem; */
-    /* border-radius: 1rem; */
-}
+/* #create-new-list-btn{
+    border: none; 
+    padding: 1rem; 
+    border-radius: 1rem; 
+} */
 #sidebar-note-ctnr{
     border: .3rem solid pink;
 }

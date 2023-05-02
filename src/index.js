@@ -1,7 +1,8 @@
 import './style.css';
 import {displayProjectMainContent} from './project-page';
 
-function start(){
+(function start(){
     displayProjectMainContent();
-};
-start();
+    // addProjectToArray();
+    return false;
+})();
