@@ -38,7 +38,6 @@ function displayProjectMainContent(){
     
 
     function createNewProjectList(title, listItem, dueDate, priority){
-
         return{title, listItem, dueDate, priority};
     };
 
@@ -53,11 +52,14 @@ function displayProjectMainContent(){
         const i = projectListArray.length - 1;
         
 
-        const projectListTable = document.createElement("table");
-            mainContent.appendChild(projectListTable);
-        const projectListRowTitle = document.createElement("tr");
-            projectListTable.appendChild(projectListRowTitle);
-    };
+        // const projectListTable = document.createElement("table");
+        //     mainContent.appendChild(projectListTable);
+        // const projectListRowTitle = document.createElement("tr");
+        //     projectListTable.appendChild(projectListRowTitle);
+        // const projectListItem = document.createElement();
+        // const projectListdueDate = document.createElement();
+        // const projectListPriority = document.createElement();
+    }; 
 
 
     function addProjectToArray(){

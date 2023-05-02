@@ -87,3 +87,15 @@ header{
     grid-area: main;
     border: .3rem solid red;
 }
+table{
+    margin-top: 10rem;
+    width: 100%;    
+}
+table th{
+    /* padding: 2rem 0rem 2rem 0rem; */
+    outline: .2rem solid blue;
+}
+table #th1{
+    padding: 2rem 18rem 2rem 0rem;
+}
+/* ===========Switch CheckBox============== */
