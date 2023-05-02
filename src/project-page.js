@@ -3,11 +3,14 @@ function displayProjectMainContent(){
     const titleModalSubmit = document.getElementById("form-btn-submit");
     const titleModalClose = document.getElementById("form-btn-close");
 
+
     const projectListForm = document.getElementById("project-title-form");
     let projectTitleInput = document.getElementById("project-title-input");
 
+
     const newProjBtn = document.getElementById("create-new-list-btn");
     const projectListArray = [];
+
 
     (function onSubmitProjectForm(){
         projectListForm.addEventListener("submit", (e) => {
@@ -19,11 +22,13 @@ function displayProjectMainContent(){
         });
     })();
 
+
     (function preventRefreshSubmit(){
         projectListForm.addEventListener("submit", (e) => {
             e.preventDefault();
         });
     })();
+
 
     (function clearInputText(){
         projectListForm.addEventListener("submit", (e) => {
@@ -31,23 +36,29 @@ function displayProjectMainContent(){
         });
     })();
     
+
     function createNewProjectList(title, listItem, dueDate, priority){
+
         return{title, listItem, dueDate, priority};
     };
+
 
     function pushProjectToArray(parameter){
         projectListArray.push(parameter);
     };
 
-    function displayProjectList(){
+
+    createNewProjectList.prototype.displayProjectList = function(){
         const mainContent = document.getElementById("main-content");
         const i = projectListArray.length - 1;
         
+
         const projectListTable = document.createElement("table");
             mainContent.appendChild(projectListTable);
         const projectListRowTitle = document.createElement("tr");
             projectListTable.appendChild(projectListRowTitle);
     };
+
 
     function addProjectToArray(){
         
@@ -56,6 +67,7 @@ function displayProjectMainContent(){
         pushProjectToArray(newProjectObject);
         console.log(newProjectObject);
     };
+
 
     (function openCloseModal(){
         newProjBtn.addEventListener("click", function() {
