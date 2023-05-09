@@ -87,15 +87,31 @@ header{
     grid-area: main;
     border: .3rem solid red;
 }
-table{
-    margin-top: 10rem;
-    width: 100%;    
+
+#project-table-heading-ctnr{
+    margin: 4rem 0rem 1rem 0rem;
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: stretch;
 }
-table th{
+#project-table-addButton{
+    padding: 1.2rem;
+    border: 1px solid white;
+}
+
+#project-table{
+    /* margin-top: 10rem; */
+    width: 100%;    
+    /* display: none; */
+}
+#project-table th{
     /* padding: 2rem 0rem 2rem 0rem; */
     outline: .2rem solid blue;
 }
-table #th1{
+#project-table #th1{
     padding: 2rem 18rem 2rem 0rem;
 }
 /* ===========Switch CheckBox============== */

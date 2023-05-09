@@ -3,21 +3,20 @@ function displayProjectMainContent(){
     const titleModalSubmit = document.getElementById("form-btn-submit");
     const titleModalClose = document.getElementById("form-btn-close");
 
-
     const projectListForm = document.getElementById("project-title-form");
     let projectTitleInput = document.getElementById("project-title-input");
 
+    const projectTable = document.getElementById("project-table");
 
     const newProjBtn = document.getElementById("create-new-list-btn");
     const projectListArray = [];
-
-
+    console.log(projectListArray);
     (function onSubmitProjectForm(){
         projectListForm.addEventListener("submit", (e) => {
             addProjectToArray();
-            displayProjectList();
+            // displayProjectList();
+            projectTable.style.display = "table";
             console.log(projectListArray);
-            
             // handle submit
         });
     })();
