@@ -38,11 +38,15 @@
         <dialog id="add-to-project-dialog">
             <form id="add-to-project-form">
                 <label for="Description">Description</label>
-                    <input type="text" class="">
+                    <input type="text" class="" id="project-list-desc-input">
                 <label for="Due Date">Due Date</label>
-                    <input type="text" class="">
+                    <input type="text" class="" id="project-list-dueDate-input">
                 <label for="Priority">Priority</label>
-                    <input type="text" class="">
+                    <select class="" id="project-list-priority-select">
+                        <option value="1">Low</option>
+                        <option value="2">Med</option>
+                        <option value="3">High</option>
+                    </select>
                 <input type="submit" id="add-to-project-btn-submit">
                 <input type="button" id="add-to-project-btn-close" value="Close">
             </form>

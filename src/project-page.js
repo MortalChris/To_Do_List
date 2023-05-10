@@ -5,6 +5,9 @@ function displayProjectMainContent(){
 
     const projectListForm = document.getElementById("project-title-form");
     let projectTitleInput = document.getElementById("project-title-input");
+    // let 
+    // let
+    // let
 
     const projectTable = document.getElementById("project-table");
     const projectTableAddBtn = document.getElementById("project-table-addButton");
