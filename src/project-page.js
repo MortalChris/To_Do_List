@@ -7,27 +7,46 @@ function displayProjectMainContent(){
     let projectTitleInput = document.getElementById("project-title-input");
 
     const projectTable = document.getElementById("project-table");
+    const projectTableAddBtn = document.getElementById("project-table-addButton");
+
+    const projectAddModal = document.getElementById("add-to-project-dialog");
+    const projectAddForm = document.getElementById("add-to-project-form");
+    const projectAddFormSubmit = document.getElementById("add-to-project-form-submit");
+    const projectAddFormClose = document.getElementById("add-to-project-btn-close");
 
     const newProjBtn = document.getElementById("create-new-list-btn");
     const projectListArray = [];
     console.log(projectListArray);
+
+
     (function onSubmitProjectForm(){
         projectListForm.addEventListener("submit", (e) => {
             addProjectToArray();
-            // displayProjectList();
+            // displayProjectList(); doesnt exist yet
             projectTable.style.display = "table";
             console.log(projectListArray);
-            // handle submit
-        });
-    })();
-
-
-    (function preventRefreshSubmit(){
-        projectListForm.addEventListener("submit", (e) => {
             e.preventDefault();
         });
     })();
 
+
+    (function addItemToProjectList(){
+        projectTableAddBtn.addEventListener("click", () => {
+            console.log("Im being clicked");
+            projectAddModal.showModal();
+        });
+    })();
+    (function addItemToProjectListModal(){
+        projectAddForm.addEventListener("submit", (e) => {
+            projectAddModal.close();
+            e.preventDefault();
+        });
+        projectAddFormClose.addEventListener("click", () => {
+            projectAddModal.close();
+            console.log("Yo im being clicked")
+        });
+    })();
+    
 
     (function clearInputText(){
         projectListForm.addEventListener("submit", (e) => {
@@ -62,9 +81,7 @@ function displayProjectMainContent(){
 
 
     function addProjectToArray(){
-        
         const newProjectObject = new createNewProjectList(projectTitleInput.value,"TestItem" ,"TestDate" ,"TestPriority");
-
         pushProjectToArray(newProjectObject);
         console.log(newProjectObject);
     };
@@ -86,3 +103,11 @@ function displayProjectMainContent(){
 };
 console.log("project-page");
 export {displayProjectMainContent};
+
+
+
+    // (function preventRefreshSubmit(){
+    //     projectListForm.addEventListener("submit", (e) => {
+    //         e.preventDefault();
+    //     });
+    // })();

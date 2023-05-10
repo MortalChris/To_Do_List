@@ -101,9 +101,14 @@ header{
     padding: 1.2rem;
     border: 1px solid white;
 }
-
+#add-to-project-dialog{
+    margin: 5rem 0rem 0rem 40rem;
+}
+#add-to-project-dialog::backdrop{
+    background-color: black;
+    opacity: .3;
+}
 #project-table{
-    /* margin-top: 10rem; */
     width: 100%;    
     /* display: none; */
 }

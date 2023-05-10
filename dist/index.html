@@ -34,6 +34,20 @@
                     </div> -->
             </form>
         </dialog>
+
+        <dialog id="add-to-project-dialog">
+            <form id="add-to-project-form">
+                <label for="Description">Description</label>
+                    <input type="text" class="">
+                <label for="Due Date">Due Date</label>
+                    <input type="text" class="">
+                <label for="Priority">Priority</label>
+                    <input type="text" class="">
+                <input type="submit" id="add-to-project-btn-submit">
+                <input type="button" id="add-to-project-btn-close" value="Close">
+            </form>
+        </dialog>
+
         <div id="sidebar">
             <header>To Do List</header>
             <!-- <div id="create-new-list-btn-ctnr">
@@ -58,7 +72,7 @@
             <table id="project-table">
                 <div id="project-table-heading-ctnr">
                     <h1>Defualt Heading</h1>
-                    <button id="project-table-addButton">Add</button>
+                    <input type="button" id="project-table-addButton" value="Add+"></input>
                 </div>
                 <tr>
                     <th id="th1">Task</th>
