@@ -41,6 +41,7 @@ function displayProjectMainContent(){
     })();
     (function addItemToProjectListModal(){
         projectAddForm.addEventListener("submit", (e) => {
+            addProjectToArray();
             projectAddModal.close();
             e.preventDefault();
         });
