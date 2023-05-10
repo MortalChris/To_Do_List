@@ -5,9 +5,9 @@ function displayProjectMainContent(){
 
     const projectListForm = document.getElementById("project-title-form");
     let projectTitleInput = document.getElementById("project-title-input");
-    // let 
-    // let
-    // let
+    let projectDescInput = document.getElementById("project-list-desc-input");
+    let projectDatecInput = document.getElementById("project-list-dueDate-input");
+    let projectPriorityInput = document.getElementById("project-list-priority-select");
 
     const projectTable = document.getElementById("project-table");
     const projectTableAddBtn = document.getElementById("project-table-addButton");
@@ -84,7 +84,7 @@ function displayProjectMainContent(){
 
 
     function addProjectToArray(){
-        const newProjectObject = new createNewProjectList(projectTitleInput.value,"TestItem" ,"TestDate" ,"TestPriority");
+        const newProjectObject = new createNewProjectList(projectTitleInput.value, projectDescInput.value ,projectDatecInput.value ,projectPriorityInput.value);
         pushProjectToArray(newProjectObject);
         console.log(newProjectObject);
     };
