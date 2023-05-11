@@ -23,9 +23,9 @@
                     <input type="date" id="project-list-dueDate-input">
                 <label for="Priority">Priority</label>
                     <select id="project-list-priority-select">
-                        <option value="1">Low</option>
-                        <option value="2">Med</option>
-                        <option value="3">High</option>
+                        <option value="Low">Low</option>
+                        <option value="Med">Med</option>
+                        <option value="High">High</option>
                     </select>
                 </div>
                 <div id="form-btn-ctnr">
@@ -48,14 +48,14 @@
         <dialog id="add-to-project-dialog">
             <form id="add-to-project-form">
                 <label for="Description">Description</label>
-                    <input type="text" id="project-add-list-desc-input">
+                    <input type="text" id="project-add-list-desc-input-addBtn">
                 <label for="Due Date">Due Date</label>
-                    <input type="date" id="project-add-list-dueDate-input">
+                    <input type="date" id="project-add-list-dueDate-input-addBtn">
                 <label for="Priority">Priority</label>
-                    <select id="project-add-list-priority-select">
-                        <option value="1">Low</option>
-                        <option value="2">Med</option>
-                        <option value="3">High</option>
+                    <select id="project-add-list-priority-select-addBtn">
+                        <option value="Low">Low</option>
+                        <option value="Med">Med</option>
+                        <option value="High">High</option>
                     </select>
                 <input type="submit" id="add-to-project-btn-submit">
                 <input type="button" id="add-to-project-btn-close" value="Close">
@@ -85,7 +85,7 @@
         <div id="main-content">
             <table id="project-table">
                 <div id="project-table-heading-ctnr">
-                    <h1>Defualt Heading</h1>
+                    <h1 id="project-heading">Defualt Heading</h1>
                     <input type="button" id="project-table-addButton" value="Add+"></input>
                 </div>
                 <tr>
@@ -93,16 +93,8 @@
                     <th id="th2">Due Date</th>
                     <th id="th3">Priority</th>
                 </tr>
+                <tr id="project-table-insert-div"></tr>
             </table>
-            <!-- <select name="priority" id="priority">
-                            <option value="High">High</option>
-                            <option value="Med">Med</option>
-                            <option value="Low">Low</option>
-                        </select> -->
-            <!-- <ul>
-                <li>Example list element that is here to fill up text and stuff</li>
-                <li>Example list element that is here to fill up text and stuff</li>
-            </ul> -->
         </div>
     </div>
 </body>

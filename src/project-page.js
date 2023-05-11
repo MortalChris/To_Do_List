@@ -25,7 +25,7 @@ function displayProjectMainContent(){
     (function onSubmitProjectForm(){
         projectListForm.addEventListener("submit", (e) => {
             addProjectToArray();
-            // displayProjectList(); doesnt exist yet
+            displayProjectInfo();
             projectTable.style.display = "table";
             console.log(projectListArray);
             e.preventDefault();
@@ -41,7 +41,7 @@ function displayProjectMainContent(){
     })();
     (function addItemToProjectListModal(){
         projectAddForm.addEventListener("submit", (e) => {
-            addProjectToArray();
+            sepereateAddProjectToArray();
             projectAddModal.close();
             e.preventDefault();
         });
@@ -59,8 +59,8 @@ function displayProjectMainContent(){
     })();
     
 
-    function createNewProjectList(title, listItem, dueDate, priority){
-        return{title, listItem, dueDate, priority};
+    function createNewProjectList(title, desc, dueDate, priority){
+        return{title, desc, dueDate, priority};
     };
 
 
@@ -69,25 +69,46 @@ function displayProjectMainContent(){
     };
 
 
-    createNewProjectList.prototype.displayProjectList = function(){
-        const mainContent = document.getElementById("main-content");
-        const i = projectListArray.length - 1;
-        
-
-        // const projectListTable = document.createElement("table");
-        //     mainContent.appendChild(projectListTable);
-        // const projectListRowTitle = document.createElement("tr");
-        //     projectListTable.appendChild(projectListRowTitle);
-        // const projectListItem = document.createElement();
-        // const projectListdueDate = document.createElement();
-        // const projectListPriority = document.createElement();
-    }; 
+    // createNewProjectList.prototype.displayProjectList = function(){
+    //     const mainContent = document.getElementById("main-content");
+    //     const i = projectListArray.length - 1;
+    // }; 
 
 
     function addProjectToArray(){
-        const newProjectObject = new createNewProjectList(projectTitleInput.value, projectDescInput.value ,projectDatecInput.value ,projectPriorityInput.value);
+        let newProjectObject = new createNewProjectList(projectTitleInput.value, projectDescInput.value ,projectDatecInput.value ,projectPriorityInput.value);
         pushProjectToArray(newProjectObject);
         console.log(newProjectObject);
+    };
+    function sepereateAddProjectToArray(){
+        const i = projectListArray.length - 1;
+        const addBtnProjectDescInput = document.getElementById("project-add-list-desc-input-addBtn");
+        const addBtnProjectDateInput = document.getElementById("project-add-list-dueDate-input-addBtn");
+        const addBtnProjectPriorityInput = document.getElementById("project-add-list-priority-select-addBtn");
+        let newProjectObject = new createNewProjectList(projectListArray[i].title, addBtnProjectDescInput.value ,addBtnProjectDateInput.value ,addBtnProjectPriorityInput.value);
+        pushProjectToArray(newProjectObject);
+        console.log(newProjectObject);
+    };
+
+
+    function displayProjectInfo(){
+        const i = projectListArray.length - 1;
+        const projectTitleContent = document.getElementById("project-heading");
+        const insertDiv = document.getElementById("project-table-insert-div");
+        
+        projectTitleContent.textContent = projectListArray[i].title;
+        const displayRow = document.createElement("tr");
+            displayRow.setAttribute('data-index', i);
+            insertDiv.appendChild(displayRow);
+        const descDisplay = document.createElement("td");
+            descDisplay.textContent = projectListArray[i].desc;
+            displayRow.appendChild(descDisplay);
+        const dateDisplay = document.createElement("td");
+            dateDisplay.textContent = projectListArray[i].dueDate;
+            displayRow.appendChild(dateDisplay);
+        const priorityDisplay = document.createElement("td");
+            priorityDisplay.textContent = projectListArray[i].priority;
+            displayRow.appendChild(priorityDisplay);
     };
 
 
@@ -107,11 +128,3 @@ function displayProjectMainContent(){
 };
 console.log("project-page");
 export {displayProjectMainContent};
-
-
-
-    // (function preventRefreshSubmit(){
-    //     projectListForm.addEventListener("submit", (e) => {
-    //         e.preventDefault();
-    //     });
-    // })();
