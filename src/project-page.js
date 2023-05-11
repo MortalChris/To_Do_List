@@ -24,9 +24,12 @@ function displayProjectMainContent(){
 
     (function onSubmitProjectForm(){
         projectListForm.addEventListener("submit", (e) => {
+            createProjectListTable();
+
             addProjectToArray();
             displayProjectInfo();
             projectTable.style.display = "table";
+            
             console.log(projectListArray);
             e.preventDefault();
         });
@@ -109,8 +112,70 @@ function displayProjectMainContent(){
         const priorityDisplay = document.createElement("td");
             priorityDisplay.textContent = projectListArray[i].priority;
             displayRow.appendChild(priorityDisplay);
+
+
+        const sideBar = document.getElementById("sidebar-list-projects");
+        const sidebarListDisplayCtnr = document.createElement("div");
+            sideBar.appendChild(sidebarListDisplayCtnr);
+        const sidebarListDisplayLi = document.createElement("li");
+            sidebarListDisplayLi.textContent = projectListArray[i].title;
+            sidebarListDisplayCtnr.appendChild(sidebarListDisplayLi);
+        const sidebarListDisplayEdit = document.createElement("button");
+            sidebarListDisplayEdit.setAttribute("class", "note-edit-btn");
+            sidebarListDisplayEdit.textContent = "Edit";
+            sidebarListDisplayLi.appendChild(sidebarListDisplayEdit);
+        const sidebarListDisplayDelete = document.createElement("button");
+            sidebarListDisplayDelete.setAttribute("class", "note-delete-btn");
+            sidebarListDisplayDelete.textContent = "Dlte";
+            sidebarListDisplayLi.appendChild(sidebarListDisplayDelete);
     };
 
+
+    function createProjectListTable(){
+        const mainContent = document.getElementById("main-content");
+
+        // Create the HTML elements
+        const table = document.createElement('table');
+        table.setAttribute('id', 'project-table');
+
+        const headingContainer = document.createElement('div');
+        headingContainer.setAttribute('id', 'project-table-heading-ctnr');
+
+        const heading = document.createElement('h1');
+        heading.setAttribute('id', 'project-heading');
+        heading.textContent = 'Default Heading';
+
+        const addButton = document.createElement('input');
+        addButton.setAttribute('type', 'button');
+        addButton.setAttribute('id', 'project-table-addButton');
+        addButton.setAttribute('value', 'Add+');
+
+        const tableRow = document.createElement('tr');
+
+        const th1 = document.createElement('th');
+        th1.setAttribute('id', 'th1');
+        th1.textContent = 'Task';
+
+        const th2 = document.createElement('th');
+        th2.setAttribute('id', 'th2');
+        th2.textContent = 'Due Date';
+
+        const th3 = document.createElement('th');
+        th3.setAttribute('id', 'th3');
+        th3.textContent = 'Priority';
+
+        // Add the elements to the document
+        table.appendChild(headingContainer);
+        table.appendChild(tableRow);
+        headingContainer.appendChild(heading);
+        headingContainer.appendChild(addButton);
+        tableRow.appendChild(th1);
+        tableRow.appendChild(th2);
+        tableRow.appendChild(th3);
+
+        mainContent.appendChild(table);
+        return addButton;
+    };
 
     (function openCloseModal(){
         newProjBtn.addEventListener("click", function() {
