@@ -14,7 +14,7 @@ function displayProjectMainContent(){
 
     const projectAddModal = document.getElementById("add-to-project-dialog");
     const projectAddForm = document.getElementById("add-to-project-form");
-    const projectAddFormSubmit = document.getElementById("add-to-project-form-submit");
+    // const projectAddFormSubmit = document.getElementById("add-to-project-form-submit");
     const projectAddFormClose = document.getElementById("add-to-project-btn-close");
 
     const newProjBtn = document.getElementById("create-new-list-btn");
@@ -28,7 +28,7 @@ function displayProjectMainContent(){
 
             addProjectToArray();
             displayProjectInfo();
-            projectTable.style.display = "table";
+            // projectTable.style.display = "table";
             
             console.log(projectListArray);
             e.preventDefault();
@@ -36,12 +36,6 @@ function displayProjectMainContent(){
     })();
 
 
-    (function addItemToProjectList(){
-        projectTableAddBtn.addEventListener("click", () => {
-            console.log("Im being clicked");
-            projectAddModal.showModal();
-        });
-    })();
     (function addItemToProjectListModal(){
         projectAddForm.addEventListener("submit", (e) => {
             sepereateAddProjectToArray();
@@ -97,18 +91,22 @@ function displayProjectMainContent(){
     function displayProjectInfo(){
         const i = projectListArray.length - 1;
         const projectTitleContent = document.getElementById("project-heading");
-        const insertDiv = document.getElementById("project-table-insert-div");
-        
+        // const insertDiv = document.getElementById("project-table-insert-div");
+        const projectTable = document.getElementById("project-table");
+
         projectTitleContent.textContent = projectListArray[i].title;
         const displayRow = document.createElement("tr");
             displayRow.setAttribute('data-index', i);
-            insertDiv.appendChild(displayRow);
+            projectTable.appendChild(displayRow);
+
         const descDisplay = document.createElement("td");
             descDisplay.textContent = projectListArray[i].desc;
             displayRow.appendChild(descDisplay);
+
         const dateDisplay = document.createElement("td");
             dateDisplay.textContent = projectListArray[i].dueDate;
             displayRow.appendChild(dateDisplay);
+
         const priorityDisplay = document.createElement("td");
             priorityDisplay.textContent = projectListArray[i].priority;
             displayRow.appendChild(priorityDisplay);
@@ -117,13 +115,16 @@ function displayProjectMainContent(){
         const sideBar = document.getElementById("sidebar-list-projects");
         const sidebarListDisplayCtnr = document.createElement("div");
             sideBar.appendChild(sidebarListDisplayCtnr);
+
         const sidebarListDisplayLi = document.createElement("li");
             sidebarListDisplayLi.textContent = projectListArray[i].title;
             sidebarListDisplayCtnr.appendChild(sidebarListDisplayLi);
+
         const sidebarListDisplayEdit = document.createElement("button");
             sidebarListDisplayEdit.setAttribute("class", "note-edit-btn");
             sidebarListDisplayEdit.textContent = "Edit";
             sidebarListDisplayLi.appendChild(sidebarListDisplayEdit);
+
         const sidebarListDisplayDelete = document.createElement("button");
             sidebarListDisplayDelete.setAttribute("class", "note-delete-btn");
             sidebarListDisplayDelete.textContent = "Dlte";
@@ -145,10 +146,10 @@ function displayProjectMainContent(){
         heading.setAttribute('id', 'project-heading');
         heading.textContent = 'Default Heading';
 
-        const addButton = document.createElement('input');
-        addButton.setAttribute('type', 'button');
-        addButton.setAttribute('id', 'project-table-addButton');
-        addButton.setAttribute('value', 'Add+');
+        const projectTableAddBtn = document.createElement('input');
+        projectTableAddBtn.setAttribute('type', 'button');
+        projectTableAddBtn.setAttribute('id', 'project-table-addButton');
+        projectTableAddBtn.setAttribute('value', 'Add+');
 
         const tableRow = document.createElement('tr');
 
@@ -168,14 +169,23 @@ function displayProjectMainContent(){
         table.appendChild(headingContainer);
         table.appendChild(tableRow);
         headingContainer.appendChild(heading);
-        headingContainer.appendChild(addButton);
+        headingContainer.appendChild(projectTableAddBtn);
         tableRow.appendChild(th1);
         tableRow.appendChild(th2);
         tableRow.appendChild(th3);
 
         mainContent.appendChild(table);
-        return addButton;
+        
+
+
+        (function addItemToProjectList(){
+            projectTableAddBtn.addEventListener("click", () => {
+                console.log("Im being clicked");
+                projectAddModal.showModal();
+            });
+        })();
     };
+
 
     (function openCloseModal(){
         newProjBtn.addEventListener("click", function() {
