@@ -133,11 +133,14 @@ function displayProjectMainContent(){
 
 
     function createProjectListTable(){
+
+        const i = projectListArray.length - 1;
         const mainContent = document.getElementById("main-content");
 
         // Create the HTML elements
         const table = document.createElement('table');
         table.setAttribute('id', 'project-table');
+        table.setAttribute('data-index', i);
 
         const headingContainer = document.createElement('div');
         headingContainer.setAttribute('id', 'project-table-heading-ctnr');
