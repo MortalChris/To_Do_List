@@ -9,8 +9,8 @@ function displayProjectMainContent(){
     let projectDatecInput = document.getElementById("project-list-dueDate-input");
     let projectPriorityInput = document.getElementById("project-list-priority-select");
 
-    const projectTable = document.getElementById("project-table");
-    const projectTableAddBtn = document.getElementById("project-table-addButton");
+    // const projectTable = document.getElementById("project-table");
+    // const projectTableAddBtn = document.getElementById("project-table-addButton");
 
     const projectAddModal = document.getElementById("add-to-project-dialog");
     const projectAddForm = document.getElementById("add-to-project-form");
@@ -25,7 +25,6 @@ function displayProjectMainContent(){
     (function onSubmitProjectForm(){
         projectListForm.addEventListener("submit", (e) => {
             createProjectListTable();
-
             addProjectToArray();
             displayProjectInfo();
             // projectTable.style.display = "table";
@@ -39,6 +38,7 @@ function displayProjectMainContent(){
     (function addItemToProjectListModal(){
         projectAddForm.addEventListener("submit", (e) => {
             sepereateAddProjectToArray();
+            displayProjectInfo();
             projectAddModal.close();
             e.preventDefault();
         });
