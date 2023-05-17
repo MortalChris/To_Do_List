@@ -38,7 +38,7 @@ function displayProjectMainContent(){
     (function addItemToProjectListModal(){
         projectAddForm.addEventListener("submit", (e) => {
             sepereateAddProjectToArray();
-            displayProjectInfo();
+            displayProjectInfo();//this needs to change to something else <-----------------------------------------------
             projectAddModal.close();
             e.preventDefault();
         });
@@ -91,12 +91,13 @@ function displayProjectMainContent(){
     function displayProjectInfo(){
         const i = projectListArray.length - 1;
         const projectTitleContent = document.getElementById("project-heading");
-        // const insertDiv = document.getElementById("project-table-insert-div");
+        
         const projectTable = document.getElementById("project-table");
 
         projectTitleContent.textContent = projectListArray[i].title;
         const displayRow = document.createElement("tr");
             displayRow.setAttribute('data-index', i);
+            
             projectTable.appendChild(displayRow);
 
         const descDisplay = document.createElement("td");
@@ -139,6 +140,7 @@ function displayProjectMainContent(){
 
         // Create the HTML elements
         const table = document.createElement('table');
+
         table.setAttribute('id', 'project-table');
         table.setAttribute('data-index', i);
 

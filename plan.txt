@@ -37,5 +37,9 @@ Main content
 		[ ] Example text..........1/12/2029 Dlte Edit
 		[X] Example text..........1/12/2029 Dlte Edit
 		[X] Example text..........1/12/2029 Dlte Edit
+		// const insertDiv = document.getElementById("project-table-insert-div"); 94
+		// const newTable = document.querySelector(`table[data-index="${i}"]`); 100
 
 
+        // const tableId = "project-list" + i;
+        // table.setAttribute("id", tableId); 143
